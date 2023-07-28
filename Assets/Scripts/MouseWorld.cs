@@ -12,11 +12,7 @@ public class MouseWorld : MonoBehaviour
         instance = this;
     }
 
-    void Update()
-    {
-         transform.position = GetPosition();
 
-    }
 
     public static Vector3 GetPosition()
     {
@@ -24,5 +20,5 @@ public class MouseWorld : MonoBehaviour
         Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, instance.mousePlaneLayerMask);
         return raycastHit.point;
 
-    } 
+    }
 }
